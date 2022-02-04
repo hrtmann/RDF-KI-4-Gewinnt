@@ -1,8 +1,8 @@
 # KI-4-Gewinnt
 4 Gewinnt mit OpenCV und MediaPipe
 
-Das Python Programm ist Rahmen einer KI Projektarbeit an der Rudolf-Diesel-Fachschule entstanden.
-Das platzieren der Spielsteine wird über eine Gestenerkennung realisiert, dabei wird automatisch die entsprechende Spalte erkannt.
+Das Python Programm ist im Rahmen einer KI Projektarbeit an der Rudolf-Diesel-Fachschule entstanden.
+Das Platzieren der Spielsteine wird über eine Gestenerkennung realisiert, dabei wird automatisch die entsprechende Spalte erkannt.
 
 Geste geschlossen:
 
