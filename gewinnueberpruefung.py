@@ -9,6 +9,8 @@ class Gewinnueberpruefung(object):
     def ueberpruefe_gewinn(self, steinematrix):
         gewonnen = 0
         letzterstein = 0
+
+
         # Überprüfe Gewinn in Zeilen
         for zeile in range(6):
             anzahlsteine = 0
@@ -92,7 +94,7 @@ class Gewinnueberpruefung(object):
                             break
                         # Nächsten zu testenden Spielstein durch Funktion holen
                         letztergetestersteinzeile, letztergetestersteinspalte = \
-                            self.naechsterspielstein(letztergetestersteinzeile, letztergetestersteinspalte, richtung)
+                            self.naechster_spielstein(letztergetestersteinzeile, letztergetestersteinspalte, richtung)
                         if letztergetestersteinzeile == -1 or letztergetestersteinspalte == -1:
                             break
                     if gewonnen == 1:
@@ -107,17 +109,17 @@ class Gewinnueberpruefung(object):
     # Feststellen der Richtung abhängig vom Spielstein
     # 1 = rechts unten; 2 = links unten; 3 = rechts oben; 4 = links oben
     def richtung(self, zeile, spalte):
-        if zeile < 4 and spalte < 4:
+        if zeile < 3 and spalte < 3:
             return 1
-        elif zeile < 4 and spalte > 3:
+        elif zeile < 3 and spalte > 2:
             return 2
-        elif zeile > 3 and spalte < 4:
+        elif zeile > 2 and spalte < 3:
             return 3
-        elif zeile > 3 and spalte > 3:
+        elif zeile > 2 and spalte > 2:
             return 4
 
     # Rückgabe des nächsten Spielsteins abhängig von der Richtung der erforderlichen Prüfung
-    def naechsterspielstein(self, zeile, spalte, richtung):
+    def naechster_spielstein(self, zeile, spalte, richtung):
         if richtung == 1:
             zeile = zeile + 1
             spalte = spalte + 1

@@ -10,7 +10,7 @@ class gesten:
         # Hand Einstellungen
         self.hands = self.mpHands.Hands(max_num_hands=1, min_detection_confidence=0.7)
         self.mpDraw = mp.solutions.drawing_utils
-        # Gedrueckt Status abfrage
+        # Gedrueckt Status Abfrage
         self.gedrueckt_status = False
 
     def erkenne_geste(self, frame):
@@ -48,14 +48,14 @@ class gesten:
                     # Distanz als "unsigned" casten -> Werte könnten Hand abhänig negativ werden
                     unsigned_distance = abs(distance)
 
-                    # Erkenne ob Finger zusammen sind und zustandsvariable False ist -> setze zustandsvariable auf True
+                    # Erkenne ob Finger zusammen sind und Zustandsvariable False ist -> setze zustandsvariable auf True
                     if unsigned_distance > 5 and unsigned_distance < 20 and self.gedrueckt_status is False:
                         self.gedrueckt_status = True
 
-                    # Erkenne ob Finger geöffnet wurden und ob zustandvariable auf True steht -> gedrueckt = True
+                    # Erkenne ob Finger geöffnet wurden und ob Zustandvariable auf True steht -> gedrueckt = True
                     if unsigned_distance > 40 and self.gedrueckt_status is True:
                         gedrueckt = True
                         self.gedrueckt_status = False
 
-            # Status ob Zustandänderung engetreten ist und Mittlere X-Position zurückgeben
+            # Status ob Zustandänderung eingetreten ist und Mittlere X-Position zurückgeben
             return frame, gedrueckt, position_x

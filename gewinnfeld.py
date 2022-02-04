@@ -13,7 +13,7 @@ class Gewinnfeld:
         # Hauptfeld zeichnen
         frame = cv2.rectangle(frame, (0, 204), (720, 480), (255, 0, 0), thickness=3)
 
-        # Spaltebegrenzungen setzen
+        # Spaltenbegrenzungen setzen
         ran = range(6)
         for x in ran:
             # x-Koordinaten berechnen
