@@ -9,6 +9,9 @@ class Gewinnfeld:
         self.feldhoehe = 46
         self.offsethoehe = 204
 
+    # Spielfeld zeichnen
+    # Übergabe: Webcamframe
+    # Rückgabe: Bearbeiteter Webcamframe
     def feld_zeichnen(self, frame):
         # Hauptfeld zeichnen
         frame = cv2.rectangle(frame, (0, 204), (720, 480), (255, 0, 0), thickness=3)
@@ -39,6 +42,9 @@ class Gewinnfeld:
 
         return frame
 
+    # Spielsteine in Spielfeld zeichnen
+    # Übergabe: Aktueller Frame
+    # Rückgabe: Bearbeiteter Frame
     def kreis_zeichnen(self, frame, steinematrix):
         ran = range(6)
         # 2 For-Schleifen in einander, um Kreise in Zeilen und Spalten zu zeichnen

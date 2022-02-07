@@ -6,6 +6,10 @@ class SpalteErkennen:
     def __init__(self):
         pass
 
+    # Aktuelle Spalte erkennen und Nutzer anzeigen, damit dieser weiß wo Spielstein gesetzt werden würde
+    # Wenn gesetzt wurde, Matrix befüllen und aktuellen Spieler ändern
+    # Übergabe: Fingerposition, Spielfeldmatrix, Aktueller Spieler, Aktueller Frame
+    # Rückgabe: Bearbeiteter Frame, Bearbeitete Spielfeldmatrix, Neuer Spieler
     def linie_zeichnen(self, x, gedrueckt, steinematrix, aktiverspieler, frame):
         # Angabe falls keine Spalte erkannt wurde
         spalte = 99

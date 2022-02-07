@@ -4,6 +4,7 @@ import mediapipe as mp
 
 class gesten:
 
+    # Model von MediaPipe laden und einstellen
     def __init__(self):
         # MediaPipe einrichten
         self.mpHands = mp.solutions.hands
@@ -13,6 +14,9 @@ class gesten:
         # Gedrueckt Status Abfrage
         self.gedrueckt_status = False
 
+    # Geste soll erkannt werden durch die der Spielstein gesetzt wird
+    # Übergabe: Aktueller Frame
+    # Rückgabe: Bearbeiteter Frame, ob Stein gesetzt werden soll und Position, an der sich Finger befinden
     def erkenne_geste(self, frame):
             # Parameter setzen
             gedrueckt = False

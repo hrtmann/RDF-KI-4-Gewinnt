@@ -6,6 +6,8 @@ class Gewinnueberpruefung(object):
         pass
 
     # Überprüfe, ob und wer gewonnen hat
+    # Übergabe: Spielfeldmatrix
+    # Rückgabe: Wer gewonnen hat
     def ueberpruefe_gewinn(self, steinematrix):
         gewonnen = 0
         letzterstein = 0
@@ -107,6 +109,8 @@ class Gewinnueberpruefung(object):
             return 99
 
     # Feststellen der Richtung abhängig vom Spielstein
+    # Übergabe: Zeile, Spalte von Stein
+    # Rückgabe: Richtung in die getestet werden soll
     # 1 = rechts unten; 2 = links unten; 3 = rechts oben; 4 = links oben
     def richtung(self, zeile, spalte):
         if zeile < 3 and spalte < 3:
@@ -119,6 +123,8 @@ class Gewinnueberpruefung(object):
             return 4
 
     # Rückgabe des nächsten Spielsteins abhängig von der Richtung der erforderlichen Prüfung
+    # Übergabe: Zeile, Spalte von Stein und Richtung, in die getestet werden soll
+    # Rückgabe: Nächster zu testender Spielstein
     def naechster_spielstein(self, zeile, spalte, richtung):
         if richtung == 1:
             zeile = zeile + 1
