@@ -14,3 +14,7 @@ Geste offen:
 
 
 Die Gewinnüberprüfung erkennt schräge, waagerechte und senkrechte vierer Folgen.
+
+Vier-Gewinnt-Team:
+Patrick Hartmann, Christian Bossert, Felix Lehner
+RDF-Nürnberg
